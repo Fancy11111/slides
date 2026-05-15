@@ -1,0 +1,16 @@
+{
+  "name": "my-talks",
+  "private": true,
+  "devDependencies": {
+    "@slidev/cli": "^52.15.2",
+    "@slidev/theme-seriph": "^0.25.0",
+    "slidev-decks": "^1.2.0"
+  },
+  "scripts": {
+    "dev": "slidev-decks",
+    "build": "slidev-decks build",
+    "export": "slidev-decks export",
+    "new": "slidev-decks new",
+    "list": "slidev-decks list"
+  }
+}

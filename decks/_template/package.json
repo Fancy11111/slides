@@ -1,0 +1,9 @@
+{
+  "name": "{{NAME}}",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  }
+}

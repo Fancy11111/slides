@@ -1,0 +1,9 @@
+{
+  "name": "2026-05-xai-llms",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  }
+}
