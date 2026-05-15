@@ -1,7 +1,7 @@
-nixpksArchive = 'd0a406bf79d281e5bfbede3a7721b4d6115bcb2c'
+nixpksArchive = 'b79bd305abe4a08888bfa54639c15c091b4def54'
 
 [phases.setup]
-nixPkgs = ["nodejs_24"]
+nixPkgs = ["nodejs_22"]
 
 [phases.install]
 cmds = ["npm install"]
