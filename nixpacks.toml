@@ -1,8 +1,10 @@
-[phases.setup]
 nixpksArchive = 'd0a406bf79d281e5bfbede3a7721b4d6115bcb2c'
 
-[phase.install]
+[phases.setup]
+nixPkgs = ["nodejs_24"]
+
+[phases.install]
 cmds = ["npm install"]
 
-[phase.build]
+[phases.build]
 cmds = ["npx slidev-decks build -all"]
