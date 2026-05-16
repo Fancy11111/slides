@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "slidev-decks",
     "build": "slidev-decks build",
+    "build-deploy": "slidev-decks build --all",
     "export": "slidev-decks export",
     "new": "slidev-decks new",
     "list": "slidev-decks list"
