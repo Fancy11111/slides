@@ -285,3 +285,10 @@ layout: two-cols-header
 - $\Sigma_{\Pi_i}=outcome(\Pi_i,\Sigma_{\Pi_{i-1}})$
 - $\mathcal{R}(P,\Sigma) = \Sigma_{\Pi_k}$: Outcome over strata
 
+---
+layout: end
+---
+
+Slides available at [https://slides.fenz.io/2026-05-i-dlv-sr](https://slides.fenz.io/2026-05-i-dlv-sr)
+
+<PoweredBySlidev></PoweredBySlidev>
