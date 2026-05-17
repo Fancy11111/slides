@@ -2,6 +2,7 @@ import { defineConfig, searchForWorkspaceRoot } from 'vite'
 
 const cwd = process.cwd()
 const parent = cwd.slice(0, cwd.lastIndexOf("/"))
+console.log(searchForWorkspaceRoot(parent))
 export default defineConfig({
     server: {
         fs: {
