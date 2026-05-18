@@ -3,11 +3,56 @@
 
 :root {
   --slidev-theme-primary: #60a5fa;
+  --slidev-theme-primary-light: #4085da;
   --slidev-theme-accent: #f59e0b;
 }
 
+.light {
+  /* --slidev-slide-container-background: white  */
+}
+
+.dark {
+  /* --slidev-slide-container-background: black */
+}
+/**/
+/* .dark .slidev-slide-content { */
+/*   background: black !important; */
+/* } */
+/**/
+/* .light .slidev-slide-content { */
+/*   background: white !important; */
+/* } */
+
 .slidev-layout {
   font-family: 'Geist Sans', 'Geist', sans-serif;
+  /* background: white; */
+}
+
+.light .slidev-layout {
+  h1,h2,h3,h4 {
+    color: var(--slidev-theme-primary-light); 
+  }
+  p,div,span {
+    color: black
+  }
+}
+
+.dark .slidev-layout {
+  /* background: black */
+}
+
+
+.light .slidev-layout {
+  h1,h2,h3,h4 {
+    color: var(--slidev-theme-primary-light); 
+  }
+  p,div,span {
+    color: black
+  }
+}
+
+.dark .slidev-layout {
+  /* background: black */
 }
 
 code, pre {
@@ -15,13 +60,37 @@ code, pre {
 }
 
 /* Cover slide gradient */
-.slidev-layout.cover {
+.dark .slidev-layout.cover {
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+
+}
+
+.light .slidev-layout.cover{
+  background: #86ceeb;
+  background: linear-gradient(90deg, rgba(134, 206, 235, 1) 0%, rgba(31, 242, 225, 1) 100%);
 }
 
 /* Section slides with subtle gradient */
-.slidev-layout.section {
+.dark .slidev-layout.section {
   background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+
+}
+
+.light .slidev-layout.section {
+  background: #86ceeb;
+  background: linear-gradient(90deg, rgba(134, 206, 235, 1) 0%, rgba(31, 242, 225, 1) 100%);
+  h1,h2,p {
+    color: rgba(20, 60, 180) !important;
+  }
+}
+
+.light .slidev-layout.end {
+  background: white !important;
+  color: black !important;
+}
+.dark .slidev-layout.end {
+  background: black !important;
+  color: white !important;
 }
 
 /* Callout cards */
