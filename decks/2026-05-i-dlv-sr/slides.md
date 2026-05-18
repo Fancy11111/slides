@@ -437,7 +437,7 @@ layout: two-cols-header
 
 <v-click>
 
-<img src="./stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="/stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
 
 </v-click>
 </div>
@@ -466,11 +466,11 @@ layout: two-cols-header
 
 <div class="flex flex-col">
 
-<img src="./stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="/stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
 
 <v-click>
 
-<img src="./stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
 
 </v-click>
 <!-- rewritten program goes to I-DLV, subprogram manager produces ground instances based on evaluation of stream manager -->
@@ -495,7 +495,7 @@ layout: two-cols-header
   - $\forall i,j: i < j \implies C_j \not \prec C_i$ 
 
 
-<img src="./stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
 
 </v-clicks>
 
@@ -549,7 +549,7 @@ layout: two-cols-header
 
 </div>
 
-<img src="./stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
 
 </div>
 
@@ -583,7 +583,7 @@ background-size: auto 70%
 
 </div>
 
-<img src="./stream-macro-graph-spec.svg" />
+<img src="/stream-macro-graph-spec.svg" />
 
 </div>
 
