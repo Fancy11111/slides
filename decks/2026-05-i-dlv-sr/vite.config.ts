@@ -8,8 +8,8 @@ export default defineConfig({
             allow: [
                 // search up for workspace root
                 searchForWorkspaceRoot(parent),
-                
                 // your custom rules
+                searchForWorkspaceRoot(cwd),
             ],
         },
     },

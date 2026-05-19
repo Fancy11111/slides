@@ -59,46 +59,6 @@ ASP-Core-2 supports aggregates and weak constraints
 
 ---
 
-# Streaming literals 
-
-<v-clicks depth="2">
-
-  - $a$ at least $c$ in $\{d_1,...,d_m\}$
-  - $a$ always in $c$ in $\{d_1,...,d_m\}$
-  - $a$ count $c$ in $\{d_1,...,d_m\}$
-
-</v-clicks>
-
-<v-click>
-
-Some shortcuts:
-
-  - $a$ at least 1 in $\{d_1,...,d_m\}$ => $a$ in $\{d_1,...,d_m\}$
-  - $a$ at least 1 in $0$ => $a$
-  - $"not "\ a$ at least in c in $\{d_1,...,d_m\}$ => $a$ at most $c'$ in $\{d_1,...,d_m\}$
-    - where $c = c' + 1$
-  - $[n]$ instead of $\{0,\ldots,n\}$
-
-</v-click>
-
----
-
-# Rules
-
-- $a :- l_1,\ldots,l_n$
-- $\#temp\ a :- l_1,\ldots,l_n$
-
-
-<div class="border-1 pt-1 mt-4 bg-slate-300/20">
-
-- $irregular \coloneq \text{not }tram(X, "St1")\text{ in }[10]$.
-- $\#\text{temp } num\_anomalies(X) \coloneq \text{irregular count }X\text{ in }[30]$.
-- $alert \coloneq num\_anomalies(X), X > 5$.
-
-</div>
-
----
-
 # Semantics of streaming literals
 
 <div> 
@@ -133,6 +93,48 @@ Some shortcuts:
 
 ---
 
+
+
+# Streaming literals 
+
+
+- $a$ at least $c$ in $\{d_1,...,d_m\}$
+- $a$ always in $\{d_1,...,d_m\}$
+- $a$ count $c$ in $\{d_1,...,d_m\}$
+
+
+<v-click>
+
+Some shortcuts:
+
+  - $a$ at least 1 in $\{d_1,...,d_m\}$ => $a$ in $\{d_1,...,d_m\}$
+  - $a$ at least 1 in $0$ => $a$
+  - $"not "\ a$ at least in c in $\{d_1,...,d_m\}$ => $a$ at most $c'$ in $\{d_1,...,d_m\}$
+    - where $c = c' + 1$
+  - $[n]$ instead of $\{0,\ldots,n\}$
+
+</v-click>
+
+---
+
+# Rules
+
+- $a\coloneq l_1,\ldots,l_n$
+- $\#temp\ a \coloneq l_1,\ldots,l_n$
+
+
+<div class="border-1 pt-1 mt-4 bg-slate-300/20">
+
+- $irregular \coloneq \text{not }tram(X, "St1")\text{ in }[10]$.
+- $\#\text{temp } num\_anomalies(X) \coloneq \text{irregular count }X\text{ in }[30]$.
+- $alert \coloneq num\_anomalies(X), X > 5$.
+
+</div>
+
+
+
+---
+
 # Semantics of streaming literals
 
 
@@ -142,7 +144,7 @@ Some shortcuts:
 
 <v-clicks>
 
-  - $a$ always in $c$ in $\{d_1,...,d_m\}$
+  - $a$ always in $\{d_1,...,d_m\}$
     - $\forall A \in O(\Sigma, D), a \in A$
   - $a$ count $c$ in $\{d_1,...,d_m\}$
     - $|\{A \in O(\Sigma, D) : a \in A\}| = c$
@@ -253,7 +255,7 @@ Some shortcuts:
 
 # Stratification
 
-- $P$ is stratified by a disjoint set of rules $\Pi_1,\ldots,Pi_k$ 
+- $P$ is stratified by a disjoint set of rules $\Pi_1,\ldots,\Pi_k$ 
   - $P = \Pi_1 \cup \ldots \cup \Pi_k$
 
 
@@ -352,7 +354,7 @@ id: arch
 
 ---
 layout: image
-image: /architecture.svg
+image: ./assets/architecture.svg
 background-size: auto 70%
 ---
 
@@ -419,7 +421,7 @@ layout: two-cols-header
 
 - Stream dependency graph $G_P^{SD}$
   - nodes: predicates $p$ in rule heads $H(r)$
-  - edges: p to q if  $\exists r \in P: preds(H(r)) = \{q\} \land p \in preds(B(r))$
+  - edges: p to q if  $\exists r \in P: \\ preds(H(r)) = \{q\} \land p \in preds(B(r))$
     - labelled with $<$ if p occurs in non-degenerate streaming literal
 
 <div class="border-1 pt-1 px-2 mt-4 bg-slate-300/20 h-fit justify-self align-self">
@@ -437,7 +439,7 @@ layout: two-cols-header
 
 <v-click>
 
-<img src="/stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="./assets/stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
 
 </v-click>
 </div>
@@ -466,11 +468,11 @@ layout: two-cols-header
 
 <div class="flex flex-col">
 
-<img src="/stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="./assets/stream-dep-graph.svg" class="w-[auto] h-[25%]"/>
 
 <v-click>
 
-<img src="/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="./assets/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
 
 </v-click>
 <!-- rewritten program goes to I-DLV, subprogram manager produces ground instances based on evaluation of stream manager -->
@@ -495,7 +497,7 @@ layout: two-cols-header
   - $\forall i,j: i < j \implies C_j \not \prec C_i$ 
 
 
-<img src="/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="./assets/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
 
 </v-clicks>
 
@@ -549,7 +551,7 @@ layout: two-cols-header
 
 </div>
 
-<img src="/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
+<img src="./assets/stream-comp-graph.svg" class="w-[auto] h-[25%]"/>
 
 </div>
 
@@ -557,7 +559,7 @@ layout: two-cols-header
 
 ---
 layout: image
-image: /architecture.svg
+image: ./assets/architecture.svg
 background-size: auto 70%
 ---
 
@@ -565,7 +567,7 @@ background-size: auto 70%
 
 ---
 layout: image-right 
-image: /stream-manager.svg
+image: ./assets/stream-manager.svg
 background-size: auto 70%
 ---
 
@@ -583,13 +585,13 @@ background-size: auto 70%
 
 </div>
 
-<img src="/stream-macro-graph-spec.svg" />
+<img src="./assets/stream-macro-graph-spec.svg" />
 
 </div>
 
 ---
 layout: image-right 
-image: /subprogram-manager.svg
+image: ./assets/subprogram-manager.svg
 background-size: auto 40%
 ---
 
@@ -606,7 +608,7 @@ background-size: auto 40%
 
 ---
 layout: image
-image: /architecture-spec.svg
+image: ./assets/architecture-spec.svg
 background-size: auto 85%
 ---
 
