@@ -1,12 +1,12 @@
 <template>
-    <span class="hover:underline" @mouseover="showPortal()" @mouseleave="hidePortal()">
+    <span class="hover:underline relative block-inline" @mouseover="showPortal()" @mouseleave="hidePortal()">
         <slot />
-        <div class="w-[80%]" v-show="displayingPortal" v-if="targetRoute !== null">
+        <div class="absolute top-[20%] left-[20%] -translate-x-100 -translate-y-40 w-[80vw] h-[80vh]" v-show="displayingPortal" v-if="targetRoute !== null">
             <SlideWrapper  
                 :clicksContext="createFixedClicks(targetRoute, 99999)"
                 :route="targetRoute"
                 :render-context="$renderContext"
-                class="scale-[80%] mx-auto !left-auto !inset-x-auto !inset-y-0 !inset-0"
+                class="relative scale-[80%] "
             >
         </SlideWrapper>
     </div>

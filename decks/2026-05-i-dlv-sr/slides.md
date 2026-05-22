@@ -49,9 +49,9 @@ layout: section
 # Syntax
 
 
-- ASP-Core-2
-- normal, stratified programs
+- extends ASP-Core-2
 - streaming literals
+- restricted to normal, stratified programs
 
 <!--
 ASP-Core-2 supports aggregates and weak constraints
@@ -346,7 +346,6 @@ Some shortcuts:
 
 ---
 layout: section
-id: arch
 ---
 
 # Architecture 
@@ -356,6 +355,7 @@ id: arch
 layout: image
 image: ./assets/architecture.svg
 background-size: auto 70%
+id: arch
 ---
 
 # Top Level
@@ -622,11 +622,11 @@ layout: end
 
 
 # Thank you for your attention
-<!---->
-<!-- <SlidePortal target="arch"> -->
-<!-- Hover -->
-<!-- </SlidePortal> -->
-<!---->
+
+<SlidePortal target="arch">
+Hover
+</SlidePortal>
+
 
 <span class="abs-bl">
 Slides available at <a target="_blank">https://slides.fenz.io/2026-05-i-dlv-sr</a>

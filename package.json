@@ -12,6 +12,7 @@
   "dependencies": {
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "slidev-addon-citations": "^0.0.13",
     "vue": "^3.5.33"
   },
   "scripts": {
