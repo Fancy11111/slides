@@ -110,7 +110,7 @@ layout: center
 class: text-center
 ---
 
-# In which aspects can AI be evaluated as explainable? 
+# In what ways can AI be evaluated as explainable? 
 
 ---
 transition: none
@@ -175,6 +175,9 @@ layout: statement
 - negative and positive thesis
 - Original position
   - veil of ignorance
+- the liberal principle of legitimacy
+
+<!-- negative: do not deserve features they were born with, positive: goods shall be equally distributed, unless unequal dist helps most vulnerable -->
 
 ---
 transition: none
@@ -197,6 +200,7 @@ transition: none
   - biased trainig data [@stochastic-parrots]
   - most vulnerable -> more likely to be harmed
 - Publicity
+  - how can one communicate a non-determinism machine in politics?
 
 ---
 
